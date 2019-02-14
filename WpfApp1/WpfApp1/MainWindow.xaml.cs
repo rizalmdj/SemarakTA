@@ -19,6 +19,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
+
 using System.Drawing.Imaging;
 
 namespace WpfApp1
@@ -37,31 +38,43 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
+            var user = MyTextBox1.Text;
+            var pass = MyTextBox2.Password;
+
             //IWebDriver driver2 = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver");
             using (var driver = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver"))
             {
                 // Go to the home page
-                driver.Navigate().GoToUrl("http://testing-ground.scraping.pro/login");
+                driver.Navigate().GoToUrl("https://www.facebook.com");
 
                 // Get the page elements
-                var userNameField = driver.FindElementById("usr");
-                var userPasswordField = driver.FindElementById("pwd");
-                var loginButton = driver.FindElementByXPath("//input[@value='Login']");
+                
+                var userNameField = driver.FindElementByXPath("//*[@id='email']");
+                var userPasswordField = driver.FindElementByXPath("//*[@id='pass']");
+                
+              
+                userNameField.SendKeys(user);
+                userPasswordField.SendKeys(pass);
 
-                // Type user name and password
-                userNameField.SendKeys("admin");
-                userPasswordField.SendKeys("12345");
+                
+                driver.FindElement(By.Id("loginbutton")).Click();
 
-                // and click the login button
-                loginButton.Click();
+
+                var post = driver.FindElementByXPath("//textarea[@name='xhpc_message']");
+                post.SendKeys("Tes post BY SELENIUM");
+
+                
+                driver.FindElement(By.XPath("//*[@id='js_20']/div[2]/div[3]/div[2]/div/div/button")).Click();
 
                 // Extract the text and save it into result.txt
-                var result = driver.FindElementByXPath("//div[@id='case_login']/h3").Text;
-                File.WriteAllText("result.txt", result);
-
+                //var result = driver.FindElementByXPath("//*[@id='js - pjax - container']/div/div[1]/div[4]/h1/span[2]").Text;
+                //File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", result);
+                //Console.WriteLine(result);
                 // Take a screenshot and save it into screen.png
                 //driver.GetScreenshot().SaveAsFile(@"screen.png", ImageFormat.Png);
             }
         }
+
     }
 }

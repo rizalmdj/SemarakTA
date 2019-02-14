@@ -10,5 +10,10 @@
         <Button x:Name = "button" Content = "Click Me"
          HorizontalAlignment = "Left" Margin = "194,150,0,0"
          VerticalAlignment = "Top" Width = "153" Height="43" Click="button_Click"/>
+
+        <TextBox Name="MyTextBox1" Margin="61,198,330,167"/>
+        <PasswordBox  Name="MyTextBox2" Margin="61,284,330,81"/>
+
+
     </Grid>
 </Window>
