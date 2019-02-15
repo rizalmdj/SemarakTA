@@ -19,7 +19,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-using WpfApp1.Model;
 
 using System.Drawing.Imaging;
 
@@ -36,45 +35,37 @@ namespace WpfApp1
             InitializeComponent();
             
         }
-        // panggil model user untuk login
-        Muser user = new Muser(); 
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            user.email = MyTextBox1.Text;
-            user.pass = MyTextBox2.Password;
 
-           //driver untuk run di google crome 
+            var user = MyTextBox1.Text;
+            var pass = MyTextBox2.Password;
+
+            //IWebDriver driver2 = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver");
             using (var driver = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver"))
             {
                 // Go to the home page
-                driver.Navigate().GoToUrl("https://indihome.co.id/verifikasi-layanan/cek-email");
-                //deklarasi variabel di web cek email
-                var userNameField = driver.FindElementByXPath("/html/body/div[4]/div/div/div[1]/div/form/div/input");  
-                userNameField.SendKeys(user.email);
-                driver.FindElement(By.XPath("/html/body/div[4]/div/div/div[1]/div/form/button")).Click();
+                driver.Navigate().GoToUrl("https://www.facebook.com");
 
-                //deklarasi variabel di web pass
-                var userPasswordField = driver.FindElementByXPath("/html/body/div[4]/div/div/div[1]/div/form/div[2]/input");
-                userPasswordField.SendKeys(user.pass);
-                driver.FindElement(By.XPath(" / html / body / div[4] / div / div / div[1] / div / form / button")).Click();
+                // Get the page elements
+                
+                var userNameField = driver.FindElementByXPath("//*[@id='email']");
+                var userPasswordField = driver.FindElementByXPath("//*[@id='pass']");
+                
+              
+                userNameField.SendKeys(user);
+                userPasswordField.SendKeys(pass);
 
-                //get data pengguna nya
-                driver.FindElement(By.XPath("//*[@id='navbar']/ul/li[5]/a/span")).Click();
-                driver.Navigate().GoToUrl("https://indihome.co.id/profile/status-langganan");
-                //driver.FindElement(By.XPath("//*[@id='mySidenav']/div/table[2]/tbody/tr[1]/td[2]/a")).Click();
-                var result = driver.FindElementByXPath("//*[@id='myCarousel']/div/div/div/div[1]/div[1]/div/div[2]/h4").Text;
-                File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", result);
-                Console.WriteLine(result);
-
-                //driver.FindElement(By.Id("loginbutton")).Click();
+                
+                driver.FindElement(By.Id("loginbutton")).Click();
 
 
-                //var post = driver.FindElementByXPath("//textarea[@name='xhpc_message']");
-                //post.SendKeys("Tes post BY SELENIUM");
+                var post = driver.FindElementByXPath("//textarea[@name='xhpc_message']");
+                post.SendKeys("Tes post BY SELENIUM");
 
-
-
+                
+                driver.FindElement(By.XPath("//*[@id='js_20']/div[2]/div[3]/div[2]/div/div/button")).Click();
 
                 // Extract the text and save it into result.txt
                 //var result = driver.FindElementByXPath("//*[@id='js - pjax - container']/div/div[1]/div[4]/h1/span[2]").Text;
