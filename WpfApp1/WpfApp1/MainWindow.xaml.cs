@@ -62,10 +62,12 @@ namespace WpfApp1
                 //get data pengguna nya
                 driver.FindElement(By.XPath("//*[@id='navbar']/ul/li[5]/a/span")).Click();
                 driver.Navigate().GoToUrl("https://indihome.co.id/profile/status-langganan");
+
+
                 //driver.FindElement(By.XPath("//*[@id='mySidenav']/div/table[2]/tbody/tr[1]/td[2]/a")).Click();
-                var result = driver.FindElementByXPath("//*[@id='myCarousel']/div/div/div/div[1]/div[1]/div/div[2]/h4").Text;
-                File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", result);
-                Console.WriteLine(result);
+                user.nomer = driver.FindElementByXPath("//*[@id='myCarousel']/div/div/div/div[1]/div[1]/div/div[2]/h4").Text;
+                File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", user.nomer);
+                Console.WriteLine( user.nomer);
 
                 //driver.FindElement(By.Id("loginbutton")).Click();
 

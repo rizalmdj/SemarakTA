@@ -11,5 +11,6 @@ namespace WpfApp1.Model
         public string email { get; set; }
         public string pass { get; set; }
         public string nama { get; set; }
+        public string nomer { get; set; }
     }
 }
