@@ -8,11 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name = "button" Content = "Click Me"
-         HorizontalAlignment = "Left" Margin = "194,150,0,0"
-         VerticalAlignment = "Top" Width = "153" Height="43" Click="button_Click"/>
+         HorizontalAlignment = "Left" Margin = "105,194,0,0"
+         VerticalAlignment = "Top" Width = "112" Height="42" Click="button_Click" RenderTransformOrigin="0.451,5.953"/>
 
-        <TextBox Name="MyTextBox1" Margin="61,198,330,167"/>
-        <PasswordBox  Name="MyTextBox2" Margin="61,284,330,81"/>
+        <TextBox Name="MyTextBox1" Margin="10,27,489,338"/>
+        <PasswordBox  Name="MyTextBox2" Margin="10,113,489,252" RenderTransformOrigin="0.505,-0.455"/>
+        <Label  Content="Nomer Tlp : " Height="42" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="152" FontSize="20"  Margin="441,30,199,0" />
+        <Label  Content="086671627" Height="42" HorizontalAlignment="Center" Name="nomerTlp"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="20"  Margin="599,30,10,0" />
+
+        <Label  Content="Email         :" Height="44" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="164" FontSize="20"  Margin="448,72,180,0" />
+        <Label  Content="086671627" Height="44" HorizontalAlignment="Center" Name="email"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="20"  Margin="599,72,10,0" />
+        
 
 
     </Grid>

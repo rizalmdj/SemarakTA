@@ -8,7 +8,9 @@ namespace WpfApp1.Model
 {
     public class Tagihan
     {
-        public string jumlahTagihan { get; set; }
-        public string status { get; set; }
+        public string totalTagihan { get; set; }
+        public string bulan { get; set; }
+        public string Status { get; set; }
+        public string paket { get; set; }
     }
 }

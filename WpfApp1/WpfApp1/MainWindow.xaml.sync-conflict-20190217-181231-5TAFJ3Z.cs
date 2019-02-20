@@ -75,7 +75,6 @@ namespace WpfApp1
                 bill.totalTagihan = driver.FindElementByXPath("/html/body/div[6]/div/div/div[3]/div/div[2]/div/div[1]/div[3]/div[2]/h4").Text;
                 bill.paket = driver.FindElementByXPath("/html/body/div[6]/div/div/div[3]/div/div[2]/div/div[1]/div[3]/div[1]/b").Text;
                 bill.Status = driver.FindElementByXPath("/html/body/div[6]/div/div/div[3]/div/div[2]/div/div[1]/div[1]/div[2]/div/p").Text;
-
                 Console.WriteLine(bill.bulan);
                 Console.WriteLine(bill.totalTagihan);
                 Console.WriteLine(bill.paket);
