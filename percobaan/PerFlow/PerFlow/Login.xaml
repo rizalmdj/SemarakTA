@@ -1,0 +1,28 @@
+﻿<Window x:Class="PerFlow.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerFlow"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <Label Content="Login Form" HorizontalAlignment="Left" Margin="292,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.69,0.724"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Height="23" Margin="152,77,0,0" TextWrapping="Wrap" Text="Nama" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="102,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.288,0.526"/>
+        <TextBox Name="userName" HorizontalAlignment="Left" Height="23" Margin="152,112,0,0" TextWrapping="Wrap" Text="User" VerticalAlignment="Top" Width="120"/>
+        <Label Content="User" HorizontalAlignment="Left" Margin="102,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.288,0.526" Width="39"/>
+        <TextBox Name="divUser" HorizontalAlignment="Left" Height="38" Margin="152,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" />
+        <Label Content="Div" HorizontalAlignment="Left" Margin="102,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="39"/>
+        <TextBox Name="pass" HorizontalAlignment="Left" Height="23" Margin="152,203,0,0" TextWrapping="Wrap" Text="Pass" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Pass" HorizontalAlignment="Left" Margin="102,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.288,0.526" Width="39"/>
+        <TextBox Name="divPass" HorizontalAlignment="Left" Height="38" Margin="152,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" />
+        <Label Content="Div" HorizontalAlignment="Left" Margin="102,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.615,3.962" Width="39"/>
+        <TextBox Name="divTom" HorizontalAlignment="Left" Height="37" Margin="152,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358"/>
+        <Label Content="Tom" HorizontalAlignment="Left" Margin="102,294,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.288,0.526" Width="39" Height="42"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="580,375,0,0" VerticalAlignment="Top" Width="75" Click="Save"/>
+        <TextBox Name="url" HorizontalAlignment="Left" Height="23" Margin="152,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Url" HorizontalAlignment="Left" Margin="102,336,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.288,0.526" Width="39"/>
+
+    </Grid>
+</Window>

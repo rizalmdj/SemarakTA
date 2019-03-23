@@ -13,13 +13,17 @@
 
         <TextBox Name="MyTextBox1" Margin="10,27,489,338"/>
         <PasswordBox  Name="MyTextBox2" Margin="10,113,489,252" RenderTransformOrigin="0.505,-0.455"/>
-        <Label  Content="Nomer Tlp : " Height="42" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="152" FontSize="20"  Margin="441,30,199,0" />
-        <Label  Content="086671627" Height="42" HorizontalAlignment="Center" Name="nomerTlp"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="20"  Margin="599,30,10,0" />
+        <Label  Content="Nomer Tlp : " Height="42" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="152" FontSize="12"  Margin="441,30,199,0" />
+        <Label   Height="42" HorizontalAlignment="Center" Name="nomerTlp"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="12"  Margin="599,30,10,0" />
 
-        <Label  Content="Email         :" Height="44" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="164" FontSize="20"  Margin="448,72,180,0" />
-        <Label  Content="086671627" Height="44" HorizontalAlignment="Center" Name="email"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="20"  Margin="599,72,10,0" />
-        
+        <Label  Content="Email         :" Height="44" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="164" FontSize="12"  Margin="448,72,180,0" />
+        <Label   Height="44" HorizontalAlignment="Center" Name="email"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="12"  Margin="599,72,10,0" />
 
+        <Label  Content="Tagihan : " Height="42" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="152" FontSize="12"  Margin="441,126,199,0" />
+        <Label   Height="42" HorizontalAlignment="Center" Name="tag"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="12"  Margin="593,126,16,0" />
+
+        <Label  Content="Satus:" Height="44" HorizontalAlignment="Center"  Foreground="#000" VerticalAlignment="Top" Width="164" FontSize="12"  Margin="448,168,180,0" />
+        <Label  Height="44" HorizontalAlignment="Center" Name="status"  Foreground="#000" VerticalAlignment="Top" Width="183" FontSize="12"  Margin="593,168,16,0" />
 
     </Grid>
 </Window>

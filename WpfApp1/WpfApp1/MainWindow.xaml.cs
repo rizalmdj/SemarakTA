@@ -61,7 +61,7 @@ namespace WpfApp1
                 driver.FindElement(By.XPath(" / html / body / div[4] / div / div / div[1] / div / form / button")).Click();
 
                 //get data pengguna nya
-                driver.Navigate().GoToUrl("https://indihome.co.id/profile/status-langganan");
+                driver.Navigate().GoToUrl("https://indihome.co.id/profile/statuds-langganan");
                 user.nomer = driver.FindElementByXPath("//*[@id='myCarousel']/div/div/div/div[1]/div[1]/div/div[2]/h4").Text;
                 File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", user.nomer);
                 Console.WriteLine(user.nomer);
@@ -80,7 +80,8 @@ namespace WpfApp1
                 Console.WriteLine(bill.totalTagihan);
                 Console.WriteLine(bill.paket);
                 Console.WriteLine(bill.Status);
-
+                tag.Content = bill.bulan;
+                status.Content = bill.Status;
 
                 //driver.FindElement(By.XPath("//*[@id='mySidenav']/div/table[2]/tbody/tr[1]/td[2]/a")).Click();
 

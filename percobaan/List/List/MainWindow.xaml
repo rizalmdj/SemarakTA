@@ -1,0 +1,33 @@
+﻿<Window x:Class="List.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="12,34,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="input" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBoxName" VerticalAlignment="Top" Width="120" Margin="147,45,0,0" />
+        <Button Content="Button" HorizontalAlignment="Left"  Margin="288,45,0,0" VerticalAlignment="Top" Width="75" Click="Save"/>
+        <ListBox x:Name="list" HorizontalAlignment="Left" Height="168" VerticalAlignment="Top" Width="350" Margin="13,154,0,0" />
+        <TextBox x:Name="div" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="147,76,0,0"/>
+        <TextBox x:Name="cari" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="480,48,0,0"/>
+        <Button x:Name="toboCari" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="638,45,0,0" Click="toboCari_Click"/>
+        <Label x:Name="Hasil" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,100,0,0" Width="232"/>
+        <Label Content="DIV" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,73,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="147,105,0,0" Width="216"/>
+        <TextBox x:Name="url" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" RenderTransformOrigin="1.339,5.014" Margin="147,110,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="175,376,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <ComboBox
+            HorizontalAlignment="Left"
+            Margin="480,154,0,0"
+            VerticalAlignment="Top"
+            Width="120"
+            Loaded="ComboBox_Loaded"
+            SelectionChanged="ComboBox_SelectionChanged"/>
+        <Button Content="chec" HorizontalAlignment="Left" Margin="545,322,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+
+    </Grid>
+</Window>
