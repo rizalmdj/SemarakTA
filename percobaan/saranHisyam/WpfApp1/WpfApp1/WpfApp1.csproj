@@ -63,11 +63,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SetLoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Activity.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -75,6 +84,12 @@
     <Compile Include="GetData.cs" />
     <Compile Include="GetDataForm.xaml.cs">
       <DependentUpon>GetDataForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SetLoginForm.xaml.cs">
+      <DependentUpon>SetLoginForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -89,6 +104,7 @@
     <Compile Include="Model\DataSingleton.cs" />
     <Compile Include="Model\MElemet.cs" />
     <Compile Include="Model\MUrl.cs" />
+    <Compile Include="Model\MUser.cs" />
     <Compile Include="OpenUrl.cs" />
     <Compile Include="OpenUrlForm.xaml.cs">
       <DependentUpon>OpenUrlForm.xaml</DependentUpon>
@@ -119,5 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Model;
 
+
 namespace WpfApp1
 {
     /// <summary>
@@ -31,6 +32,8 @@ namespace WpfApp1
 
         List<Activity> Activities = new List<Activity>();
        
+
+        //menu buat ambil url
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenUrlForm open = new OpenUrlForm(Activities, driver);
@@ -56,15 +59,22 @@ namespace WpfApp1
                    
                 }
             hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
+        
 
         }
-
+        //Menu Untuk ambil data web
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             GetDataForm open = new GetDataForm(Activities, driver);
             open.ShowDialog();
             list.ItemsSource = null;
             list.ItemsSource = Activities;
+        }
+        //menu buat bikin login page
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            SetLoginForm open = new SetLoginForm(Activities, driver);
+            open.ShowDialog();
         }
     }
 }
