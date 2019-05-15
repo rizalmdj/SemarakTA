@@ -51,17 +51,17 @@ namespace WpfApp1
                 // Go to the home page
                 driver.Navigate().GoToUrl("https://indihome.co.id/verifikasi-layanan/cek-email");
                 //deklarasi variabel di web cek email
-                var userNameField = driver.FindElementByXPath("/html/body/div[4]/div/div/div[1]/div/form/div/input");
+                var userNameField = driver.FindElementByXPath("/html/body/div[3]/div/div/div[1]/div/form/div/input");
                 userNameField.SendKeys(user.email);
-                driver.FindElement(By.XPath("/html/body/div[4]/div/div/div[1]/div/form/button")).Click();
+                driver.FindElement(By.XPath("/html/body/div[3]/div/div/div[1]/div/form/button")).Click();
 
                 //deklarasi variabel di web pass
-                var userPasswordField = driver.FindElementByXPath("/html/body/div[4]/div/div/div[1]/div/form/div[2]/input");
+                var userPasswordField = driver.FindElementByXPath("/html/body/div[3]/div/div/div[1]/div/form/div[2]/input");
                 userPasswordField.SendKeys(user.pass);
-                driver.FindElement(By.XPath(" / html / body / div[4] / div / div / div[1] / div / form / button")).Click();
+                driver.FindElement(By.XPath("/html/body/div[3]/div/div/div[1]/div/form/button")).Click();
 
                 //get data pengguna nya
-                driver.Navigate().GoToUrl("https://indihome.co.id/profile/statuds-langganan");
+                driver.Navigate().GoToUrl("https://indihome.co.id/profile/status-langganan");
                 user.nomer = driver.FindElementByXPath("//*[@id='myCarousel']/div/div/div/div[1]/div[1]/div/div[2]/h4").Text;
                 File.WriteAllText(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\WpfApp1result.txt", user.nomer);
                 Console.WriteLine(user.nomer);

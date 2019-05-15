@@ -66,5 +66,14 @@ namespace WpfApp1
             list.ItemsSource = null;
             list.ItemsSource = Activities;
         }
+
+        private void Tombol(object sender, RoutedEventArgs e)
+        {
+            ButtonClik open = new ButtonClik(Activities, driver);
+            open.ShowDialog();
+            list.ItemsSource = null;
+            list.ItemsSource = Activities;
+
+        }
     }
 }

@@ -83,6 +83,7 @@
     <Compile Include="ButtonClik.xaml.cs">
       <DependentUpon>ButtonClik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Clik.cs" />
     <Compile Include="GetData.cs" />
     <Compile Include="GetDataForm.xaml.cs">
       <DependentUpon>GetDataForm.xaml</DependentUpon>
@@ -124,6 +125,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

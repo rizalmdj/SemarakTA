@@ -37,10 +37,10 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             data.PartName = Nama.Text;
-            data.DivElement = Nama.Text;
-            Activity a = new GetData(driver, data);
+            data.DivElement = DivElement.Text;
+            Activity a = new Clik(driver, data);
             Activities.Add(a);
-            Console.WriteLine("-----------data berhasil kesimpan-------------------");
+            Console.WriteLine("-----------data berhasil clik kesimpan-------------------");
             Close();
         }
     }

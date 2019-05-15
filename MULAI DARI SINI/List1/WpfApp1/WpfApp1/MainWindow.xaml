@@ -12,6 +12,7 @@
         <ListBox x:Name="list" HorizontalAlignment="Left" Height="209" Margin="10,201,0,0" VerticalAlignment="Top" Width="414"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="128,103,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" RenderTransformOrigin="0.427,2.318"/>
         <ListBox Name="hasil" HorizontalAlignment="Left" Height="100" Margin="281,10,0,0" VerticalAlignment="Top" Width="501"/>
+        <Button Content="Clik" HorizontalAlignment="Left" Margin="548,306,0,0" VerticalAlignment="Top" Width="75" Click="Tombol"/>
 
     </Grid>
 </Window>
