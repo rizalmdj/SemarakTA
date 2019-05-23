@@ -24,7 +24,7 @@ namespace DiagramDesigner
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Open, Open_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save_Executed));
-            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Print, Print_Executed));
+            
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Delete, Delete_Executed, Delete_Enabled));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.NotACommand, Run_Executed));
 
@@ -104,22 +104,7 @@ namespace DiagramDesigner
 
         #endregion
 
-        #region Print Command
-
-        private void Print_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            SelectionService.ClearSelection();
-
-            PrintDialog printDialog = new PrintDialog();
-
-            if (true == printDialog.ShowDialog())
-            {
-                printDialog.PrintVisual(this, "WPF Diagram");
-            }
-        }
-
-        #endregion
-
+        
 
         #region Delete Command
 

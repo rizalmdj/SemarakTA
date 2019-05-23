@@ -4,8 +4,9 @@
         xmlns:s="clr-namespace:DiagramDesigner"
         xmlns:c="clr-namespace:DiagramDesigner.Controls"
         WindowStartupLocation="CenterScreen"
-        Title="Diagram Designer"
-        Height="850" Width="1000">
+        Title="RPA TOOLS"
+        
+        WindowState="Maximized">
 
     <Window.Resources>
         <ContextMenu x:Key="DesignerCanvasContextMenu">

@@ -57,21 +57,7 @@
                             </Grid>
                         </Button.Content>
                     </Button>
-                    <Button Margin="1" Padding="2" HorizontalContentAlignment="Left"
-                            Style="{StaticResource ToolBarButtonBaseStyle}"
-                            Command="{x:Static ApplicationCommands.Print}"
-                            CommandTarget="{Binding ElementName=MyDesigner}">
-                        <Button.Content>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                <Image Source="Images/Print.png" Width="16"/>
-                                <TextBlock Margin="3,0,3,0" Text="Print" VerticalAlignment="Center" Grid.Column="1"/>
-                            </Grid>
-                        </Button.Content>
-                    </Button>
+                    
                 </StackPanel>
                 <Button Margin="3" Width="55"
                         Style="{StaticResource ToolBarButtonBaseStyle}"
