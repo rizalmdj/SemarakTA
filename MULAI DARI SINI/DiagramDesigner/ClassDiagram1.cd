@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DiagramDesigner.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Connection" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAABwCiiA0AoCJAQECgQAhAgIQAABIAAAAQoAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DiagramDesigner.ConnectionAdorner" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hCAAAAAAAAADAAQAEAQBKIAQBAAAAgQABAAiKQIEQIA=</HashCode>
+      <FileName>ConnectionAdorner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Connector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQIAAAAgoAAAIAAMgBQAAEAAIAAAACAABAA=</HashCode>
+      <FileName>Connector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DiagramDesigner.ConnectorAdorner" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQABAAACAAABBAAAAQAAAAgIAIGAAI=</HashCode>
+      <FileName>ConnectorAdorner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.DesignerCanvas">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBEkAEAAEAQCAAEAAEBSAAQAADACAAABJAAwAAAAMBA=</HashCode>
+      <FileName>DesignerCanvas.Commands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.DesignerItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAQA0MAAAAAAAAAAQACAABAAIAAAgQAoAgI=</HashCode>
+      <FileName>DesignerItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DiagramDesigner.PathFinder">
+    <Position X="14.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQDAAAAAAAAAAQIAgAAggQBQAIhAAAAAAAAEAAA=</HashCode>
+      <FileName>PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.RubberbandAdorner" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAEAAAAAAAhAAAAAAAABgIAACAAA=</HashCode>
+      <FileName>RubberbandAdorner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.SelectionService" Collapsed="true">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACEAAACAAAAAAAAAAAABARAAAAQiAAAAAgA=</HashCode>
+      <FileName>SelectionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Toolbox">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAEAAEAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Toolbox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.ToolboxItem">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAABQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ToolboxItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.DragObject">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ToolboxItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Window1" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DiagramDesigner.Controls.DragThumb">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\DragThumb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Controls.RelativePositionPanel" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAQAAAAAQAAAAAAAgAAAAAAABEAA=</HashCode>
+      <FileName>Controls\RelativePositionPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Controls.ResizeThumb">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAAAAAAAAAAAQAAAAAAAgABAAAACAAAAA=</HashCode>
+      <FileName>Controls\ResizeThumb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Properties.Resources" Collapsed="true">
+    <Position X="12.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagramDesigner.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="DiagramDesigner.ConnectorInfo">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAQAAAAAgAAAAAAAAAAEAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Connector.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="DiagramDesigner.IGroupable" Collapsed="true">
+    <Position X="16.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAIAAA=</HashCode>
+      <FileName>IGroupable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DiagramDesigner.ISelectable" Collapsed="true">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISelectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DiagramDesigner.ArrowSymbol" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAEAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DiagramDesigner.ConnectorOrientation" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAACACAAAEAAAA=</HashCode>
+      <FileName>Connector.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:DiagramDesigner"
+                    xmlns:c="clr-namespace:DiagramDesigner.Controls">
+
+  <Brush x:Key="ItemStroke">#FFD69436</Brush>
+  <LinearGradientBrush x:Key="ItemBrush" StartPoint="0,0" EndPoint="0,1">
+    <LinearGradientBrush.GradientStops>
+      <GradientStop Color="#FAFBE9" Offset="0" />
+      <GradientStop Color="Orange" Offset="1" />
+    </LinearGradientBrush.GradientStops>
+  </LinearGradientBrush>
+
+  <Brush x:Key="ItemStroke1">#ACADCD</Brush>
+  <LinearGradientBrush x:Key="ItemBrush1" StartPoint="0,0" EndPoint="0,1" >
+    <GradientStop Color="#FEFEFE" Offset="0"/>
+    <GradientStop Color="#BDBEDE" Offset="1"/>
+  </LinearGradientBrush>
+
+
+  <Style x:Key="FlowChartItemStyle" TargetType="Path">
+    <Setter Property="Fill" Value="{StaticResource ItemBrush}"/>
+    <Setter Property="Stroke" Value="{StaticResource ItemStroke}"/>
+    <Setter Property="StrokeThickness" Value="1"/>
+    <Setter Property="StrokeLineJoin" Value="Round"/>
+    <Setter Property="Stretch" Value="Fill"/>
+    <Setter Property="IsHitTestVisible" Value="False"/>
+    <Setter Property="SnapsToDevicePixels" Value="True"/>
+    <!--<Setter Property="BitmapEffect">
+      <Setter.Value>
+        <DropShadowBitmapEffect Color="#AAA" Direction="315" ShadowDepth="10"
+                                Softness="0.5" Opacity="0.6"/>
+      </Setter.Value>
+    </Setter>-->
+  </Style>
+
+  <!-- Process -->
+  <Style x:Key="Process" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+    <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
+  </Style>
+
+  <Style x:Key="Process_DragThumb" TargetType="Path" BasedOn="{StaticResource Process}">
+    <Setter Property="IsHitTestVisible" Value="true"/>
+    <Setter Property="Fill" Value="Transparent"/>
+    <Setter Property="Stroke" Value="Transparent"/>
+  </Style>
+
+  <!-- Decision -->
+  <Style x:Key="Decision" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+    <Setter Property="Data" Value="M 0,20 L 30 0 L 60,20 L 30,40 Z"/>
+  </Style>
+
+  <Style x:Key="Decision_DragThumb" TargetType="Path" BasedOn="{StaticResource Decision}">
+    <Setter Property="IsHitTestVisible" Value="true"/>
+    <Setter Property="Fill" Value="Transparent"/>
+    <Setter Property="Stroke" Value="Transparent"/>
+  </Style>
+
+  <!-- Start -->
+  <Style x:Key="Start" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+    <Setter Property="Data" Value="M 10,20 A 20,20 0 1 1 50,20 A 20,20 0 1 1 10,20"/>
+  </Style>
+
+    <Style x:Key="Start_DragThumb" TargetType="Path" BasedOn="{StaticResource Start}">
+        <Setter Property="IsHitTestVisible" Value="true"/>
+        <Setter Property="Fill" Value="Transparent"/>
+        <Setter Property="Stroke" Value="Transparent"/>
+    </Style>
+
+    <!-- Star -->
+  <Style x:Key="Star" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+    <Setter Property="Data" Value="M 9,2 11,7 17,7 12,10 14,15 9,12 4,15 6,10 1,7 7,7 Z"/>
+  </Style>
+
+  <Style x:Key="Star_DragThumb" TargetType="Path" BasedOn="{StaticResource Star}">
+    <Setter Property="IsHitTestVisible" Value="true"/>
+    <Setter Property="Fill" Value="Transparent"/>
+    <Setter Property="Stroke" Value="Transparent"/>
+  </Style>
+
+  <s:Toolbox x:Key="FlowChartStencils" ItemSize="60,50" SnapsToDevicePixels="True"
+             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+    <ItemsControl.Items>
+
+      <Path Style="{StaticResource Process}" ToolTip="Process">
+        <s:DesignerItem.DragThumbTemplate>
+          <ControlTemplate>
+            <Path Style="{StaticResource Process_DragThumb}"/>
+          </ControlTemplate>
+        </s:DesignerItem.DragThumbTemplate>
+      </Path>
+
+      <Path Style="{StaticResource Decision}" ToolTip="Decision">
+        <s:DesignerItem.DragThumbTemplate>
+          <ControlTemplate>
+            <Path Style="{StaticResource Decision_DragThumb}"/>
+          </ControlTemplate>
+        </s:DesignerItem.DragThumbTemplate>
+      </Path>
+
+      <Path Style="{StaticResource Start}" ToolTip="Start">
+        <s:DesignerItem.DragThumbTemplate>
+          <ControlTemplate>
+            <Path Style="{StaticResource Start_DragThumb}"/>
+          </ControlTemplate>
+        </s:DesignerItem.DragThumbTemplate>
+      </Path>
+
+      <Path Style="{StaticResource Start}" ToolTip="Star">
+        <s:DesignerItem.DragThumbTemplate>
+          <ControlTemplate>
+            <Path Style="{StaticResource Start_DragThumb}"/>
+          </ControlTemplate>
+        </s:DesignerItem.DragThumbTemplate>
+      </Path>
+ 
+
+    </ItemsControl.Items>
+  </s:Toolbox>
+</ResourceDictionary>

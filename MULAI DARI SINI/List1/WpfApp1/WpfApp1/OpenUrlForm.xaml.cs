@@ -27,7 +27,7 @@ namespace WpfApp1
             InitializeComponent();
             Activities = _Activities;
             driver = _driver;
-            Console.WriteLine(driver);
+            Console.WriteLine("Open Url");
             Console.WriteLine(driver);
         }
        
