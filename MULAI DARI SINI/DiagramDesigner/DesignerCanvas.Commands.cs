@@ -23,8 +23,7 @@ namespace DiagramDesigner
         {
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Open, Open_Executed));
-            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save_Executed));
-            
+            this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save_Executed));    
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.Delete, Delete_Executed, Delete_Enabled));
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.NotACommand, Run_Executed));
 
