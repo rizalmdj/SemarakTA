@@ -27,5 +27,10 @@ namespace DiagramDesigner
         {
 
         }
+
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

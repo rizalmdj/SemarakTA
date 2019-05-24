@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiagramDesigner"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        Title="MenampilkanDataForm" Height="460" Width="750">
     <Grid>
-        
+        <Label Content="Result" FontSize="40" HorizontalAlignment="Left" Margin="309,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
+        <ScrollBar Margin="724,78,0,10" Width="Auto"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="341" Margin="10,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,154,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,344,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
+        <TextBox HorizontalAlignment="Left" FontSize="24" Height="38" Margin="10,381,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="709"/>
     </Grid>
 </Window>

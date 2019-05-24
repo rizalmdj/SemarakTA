@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiagramDesigner"
         mc:Ignorable="d"
-        Title="ButtonForm" Height="450" Width="800">
+        Title="ButtonForm" Height="460" Width="750">
     <Grid>
-        
+        <Label Content="Name :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,96.6,0,0" VerticalAlignment="Top"/>
+        <Label Content="Xpath :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,152.6,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,96.6,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
+        <Button Content="OK" FontSize="24" HorizontalAlignment="Left" Margin="618.5,348,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button Content="Cancel" FontSize="24" HorizontalAlignment="Left" Margin="467,348,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,157.5,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
     </Grid>
 </Window>
