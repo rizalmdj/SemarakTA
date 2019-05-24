@@ -34,18 +34,29 @@
     </Setter>-->
   </Style>
 
-  <!-- Process -->
-  <Style x:Key="Process" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+  <!--  Login -->
+    <Style x:Key="Login" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
         <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
     </Style>
 
-  <Style x:Key="Process_DragThumb" TargetType="Path" BasedOn="{StaticResource Process}">
+  <Style x:Key="Login_DragThumb" TargetType="Path" BasedOn="{StaticResource Login}">
     <Setter Property="IsHitTestVisible" Value="true"/>
     <Setter Property="Fill" Value="Transparent"/>
     <Setter Property="Stroke" Value="Transparent"/>
   </Style>
 
-  <!-- OpenUrl -->
+    <!--  SetData -->
+    <Style x:Key="SetData" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+        <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
+    </Style>
+
+    <Style x:Key="SetData_DragThumb" TargetType="Path" BasedOn="{StaticResource SetData}">
+        <Setter Property="IsHitTestVisible" Value="true"/>
+        <Setter Property="Fill" Value="Transparent"/>
+        <Setter Property="Stroke" Value="Transparent"/>
+    </Style>
+
+    <!-- OpenUrl -->
   <Style x:Key="OpenURL" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}" >
       <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
       
@@ -62,7 +73,7 @@
         <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
     </Style>
 
-  <Style x:Key="GetData_DragThumb" TargetType="Path" BasedOn="{StaticResource Process}">
+  <Style x:Key="GetData_DragThumb" TargetType="Path" BasedOn="{StaticResource GetData}">
     <Setter Property="IsHitTestVisible" Value="true"/>
     <Setter Property="Fill" Value="Transparent"/>
     <Setter Property="Stroke" Value="Transparent"/>
@@ -105,10 +116,10 @@
              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
     <ItemsControl.Items>
 
-      <Path Style="{StaticResource Process}" ToolTip="Process">
+      <Path Style="{StaticResource Login}" ToolTip="Login">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
-            <Path Style="{StaticResource Process_DragThumb}"/>
+            <Path Style="{StaticResource Login_DragThumb}"/>
           </ControlTemplate>
         </s:DesignerItem.DragThumbTemplate>
       </Path>
@@ -125,6 +136,14 @@
          <s:DesignerItem.DragThumbTemplate>
            <ControlTemplate>
              <Path Style="{StaticResource GetData_DragThumb}"/>
+           </ControlTemplate>
+         </s:DesignerItem.DragThumbTemplate>
+       </Path>
+        
+       <Path Style="{StaticResource SetData}" ToolTip="SetData">
+         <s:DesignerItem.DragThumbTemplate>
+           <ControlTemplate>
+             <Path Style="{StaticResource SetData_DragThumb}"/>
            </ControlTemplate>
          </s:DesignerItem.DragThumbTemplate>
        </Path>

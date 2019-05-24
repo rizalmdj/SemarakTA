@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SetDataForm" Height="460" Width="750">
     <Grid>
-        <Label Content="Get Data" FontSize="40" HorizontalAlignment="Left" Margin="266,22.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
+        <Label Content="Set Data" FontSize="40" HorizontalAlignment="Left" Margin="266,22.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
         <Label Content="Element Name :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,126.7,0,0" VerticalAlignment="Top"/>
         <Label Content="Xpath Element :" FontSize="24" HorizontalAlignment="Left" Margin="68.5,209.6,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,131.6,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>

@@ -161,6 +161,16 @@ namespace DiagramDesigner
                 Window win = new GetDataForm();
                 win.Show();
             }
+            else if ((string)c.ToolTip == "Login")
+            {
+                Window win = new LoginForm();
+                win.Show();
+            }
+            else if ((string)c.ToolTip == "SetData")
+            {
+                Window win = new SetDataForm();
+                win.Show();
+            }
 
 
 
