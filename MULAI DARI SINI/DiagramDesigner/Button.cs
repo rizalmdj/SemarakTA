@@ -6,10 +6,14 @@ using System.Text;
 namespace DiagramDesigner
 {
     [System.SerializableAttribute()]
-    class Button : Activity
+    public class Button : Activity
     {
 
         public string xpathButton;
+        public Button()
+        {
+
+        }
         public Button(string _xpathButton)
         {
 

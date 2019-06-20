@@ -9,9 +9,9 @@ namespace DiagramDesigner
 {
     [System.SerializableAttribute()]
     [XmlInclude(typeof(OpenUrl))]
-    //[XmlInclude(typeof(GetData))]
-    //[XmlInclude(typeof(SetData))]
-    //[XmlInclude(typeof(Button))]
+    [XmlInclude(typeof(GetData))]
+    [XmlInclude(typeof(SetData))]
+    [XmlInclude(typeof(Button))]
     public abstract class Activity
     {
         [XmlIgnoreAttribute]

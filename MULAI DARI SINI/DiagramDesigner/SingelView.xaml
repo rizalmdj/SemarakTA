@@ -1,0 +1,13 @@
+﻿<Window x:Class="DiagramDesigner.SingelView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiagramDesigner"
+        mc:Ignorable="d"
+        Title="SingelView" Height="450" Width="800">
+    <Grid>
+        <Label Content="Singel View" FontSize="40" HorizontalAlignment="Left" Margin="266,22.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
+        <ListBox Name="hasil" HorizontalAlignment="Left" Height="203.636" Margin="150.091,108.182,0,0" VerticalAlignment="Top" Width="501"/>
+    </Grid>
+</Window>

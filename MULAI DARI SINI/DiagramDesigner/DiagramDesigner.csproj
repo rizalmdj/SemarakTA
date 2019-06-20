@@ -141,6 +141,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SingelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -157,7 +161,7 @@
     <Compile Include="LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\MElement.cs" />
+    <Compile Include="Model\DataSingleton.cs" />
     <Compile Include="OpenUrl.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="OpenUrlForm.xaml.cs">
@@ -167,6 +171,9 @@
     <Compile Include="SetData.cs" />
     <Compile Include="SetDataForm.xaml.cs">
       <DependentUpon>SetDataForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingelView.xaml.cs">
+      <DependentUpon>SingelView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>

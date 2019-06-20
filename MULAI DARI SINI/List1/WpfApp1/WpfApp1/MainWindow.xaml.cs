@@ -26,7 +26,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            driver = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver");
+            driver = new ChromeDriver(@"D:\TA\SemarakTA\Driver");
         }
 
         List<Activity> Activities = new List<Activity>();
@@ -52,8 +52,7 @@ namespace WpfApp1
                 {
                     Console.WriteLine(p.Key + " = " + p.Value);
                     //hasil.ItemsSource = null;
-              
-                   
+                  
                 }
             hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
 

@@ -7,11 +7,14 @@ using System.Text;
 namespace DiagramDesigner
 {
     [System.SerializableAttribute()]
-    class SetData : Activity
+    public class SetData : Activity
     {
-  
         public string xpath;
         public string content;
+        public SetData()
+        {
+
+        }
         public SetData(string _xpath, string _content)
         {
          

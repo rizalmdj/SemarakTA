@@ -176,12 +176,6 @@ namespace DiagramDesigner
            // if (e.ChangedButton == MouseButton.Left)
             //{
 
-                
-
-
-
-
-
                 base.OnPreviewMouseDown(e);
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
 

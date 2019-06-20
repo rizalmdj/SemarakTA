@@ -34,7 +34,7 @@
     </Setter>-->
   </Style>
 
-  <!--  Button -->
+  <!--  Button Click-->
     <Style x:Key="Button" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
         <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
     </Style>
@@ -80,7 +80,7 @@
   </Style>   
     
     <!-- Decision -->
-  <Style x:Key="Decision" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+  <!-- <Style x:Key="Decision" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
     <Setter Property="Data" Value="M 0,20 L 30 0 L 60,20 L 30,40 Z"/>
   </Style>
 
@@ -88,7 +88,7 @@
     <Setter Property="IsHitTestVisible" Value="true"/>
     <Setter Property="Fill" Value="Transparent"/>
     <Setter Property="Stroke" Value="Transparent"/>
-  </Style>
+  </Style> -->
 
   <!-- Start -->
   <Style x:Key="Start" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
@@ -148,13 +148,13 @@
          </s:DesignerItem.DragThumbTemplate>
        </Path>
 
-      <Path Style="{StaticResource Decision}" ToolTip="Decision">
+      <!--<Path Style="{StaticResource Decision}" ToolTip="Decision">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
             <Path Style="{StaticResource Decision_DragThumb}"/>
           </ControlTemplate>
         </s:DesignerItem.DragThumbTemplate>
-      </Path>
+      </Path> -->
 
       <Path Style="{StaticResource Start}" ToolTip="Start">
         <s:DesignerItem.DragThumbTemplate>
