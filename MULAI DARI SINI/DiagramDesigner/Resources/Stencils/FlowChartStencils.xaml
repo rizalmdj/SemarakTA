@@ -34,12 +34,12 @@
     </Setter>-->
   </Style>
 
-  <!--  Login -->
-    <Style x:Key="Login" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+  <!--  Button -->
+    <Style x:Key="Button" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
         <Setter Property="Data" Value="M 0,0 H 60 V40 H 0 Z"/>
     </Style>
 
-  <Style x:Key="Login_DragThumb" TargetType="Path" BasedOn="{StaticResource Login}">
+  <Style x:Key="Button_DragThumb" TargetType="Path" BasedOn="{StaticResource Button}">
     <Setter Property="IsHitTestVisible" Value="true"/>
     <Setter Property="Fill" Value="Transparent"/>
     <Setter Property="Stroke" Value="Transparent"/>
@@ -101,12 +101,12 @@
         <Setter Property="Stroke" Value="Transparent"/>
     </Style>
 
-    <!-- Star -->
-  <Style x:Key="Star" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
+    <!-- End -->
+  <Style x:Key="End" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
     <Setter Property="Data" Value="M 9,2 11,7 17,7 12,10 14,15 9,12 4,15 6,10 1,7 7,7 Z"/>
   </Style>
 
-  <Style x:Key="Star_DragThumb" TargetType="Path" BasedOn="{StaticResource Star}">
+  <Style x:Key="End_DragThumb" TargetType="Path" BasedOn="{StaticResource End}">
     <Setter Property="IsHitTestVisible" Value="true"/>
     <Setter Property="Fill" Value="Transparent"/>
     <Setter Property="Stroke" Value="Transparent"/>
@@ -116,10 +116,10 @@
              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
     <ItemsControl.Items>
 
-      <Path Style="{StaticResource Login}" ToolTip="Login">
+      <Path Style="{StaticResource Button}" ToolTip="Click">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
-            <Path Style="{StaticResource Login_DragThumb}"/>
+            <Path Style="{StaticResource Button_DragThumb}"/>
           </ControlTemplate>
         </s:DesignerItem.DragThumbTemplate>
       </Path>
@@ -164,10 +164,10 @@
         </s:DesignerItem.DragThumbTemplate>
       </Path>
 
-      <Path Style="{StaticResource Start}" ToolTip="Star">
+      <Path Style="{StaticResource Start}" ToolTip="End">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
-            <Path Style="{StaticResource Start_DragThumb}"/>
+            <Path Style="{StaticResource End_DragThumb}"/>
           </ControlTemplate>
         </s:DesignerItem.DragThumbTemplate>
       </Path>

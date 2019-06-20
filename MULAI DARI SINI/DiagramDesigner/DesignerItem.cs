@@ -135,7 +135,35 @@ namespace DiagramDesigner
         {
         }
 
-       
+        //membuat double klik untuk item pada canvas
+        protected override void OnPreviewMouseDoubleClick(MouseButtonEventArgs e)
+        {
+            base.OnPreviewMouseDoubleClick(e);
+            System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)Content;
+            Console.WriteLine(c.ToolTip);
+
+            if ((string)c.ToolTip == "OpenURL")
+            {
+                Window win = new OpenUrlForm(this);
+                win.Show();
+            }
+            else if ((string)c.ToolTip == "GetData")
+            {
+                Window win = new GetDataForm(this);
+                win.Show();
+            }
+            else if ((string)c.ToolTip == "Click")
+            {
+                Window win = new ButtonForm(this);
+                win.Show();
+            }
+            else if ((string)c.ToolTip == "SetData")
+            {
+                Window win = new SetDataForm(this);
+                win.Show();
+            }
+            
+        }
 
 
         // saat klik item pada canvas akan menampilkan mana yang dipilih
@@ -145,36 +173,16 @@ namespace DiagramDesigner
             //Console.WriteLine("Dewi Semangat yah");
             //naH 2 line di bawah ini tuh buat masuk ke window baru
 
-            
+           // if (e.ChangedButton == MouseButton.Left)
+            //{
 
-            System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)Content;
-            Console.WriteLine(c.ToolTip);
-
-
-            if ((string)c.ToolTip == "OpenURL")
-            {
-                Window win = new OpenUrlForm(this);
-                win.Show();
-            }
-            else if ((string)c.ToolTip == "GetData")
-            {
-                Window win = new GetDataForm();
-                win.Show();
-            }
-            else if ((string)c.ToolTip == "Login")
-            {
-                Window win = new LoginForm();
-                win.Show();
-            }
-            else if ((string)c.ToolTip == "SetData")
-            {
-                Window win = new SetDataForm();
-                win.Show();
-            }
+                
 
 
 
-            base.OnPreviewMouseDown(e);
+
+
+                base.OnPreviewMouseDown(e);
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
 
             // update selection
@@ -184,7 +192,7 @@ namespace DiagramDesigner
                     if (this.IsSelected)
                     {
                         designer.SelectionService.RemoveFromSelection(this);
-                        
+
                     }
                     else
                     {
@@ -197,8 +205,10 @@ namespace DiagramDesigner
                 Focus();
             }
 
-            e.Handled = false;
+            //e.Handled = false;
+            //}
         }
+
 
         void DesignerItem_Loaded(object sender, RoutedEventArgs e)
         {

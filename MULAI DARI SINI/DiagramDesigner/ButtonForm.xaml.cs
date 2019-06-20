@@ -18,9 +18,26 @@ namespace DiagramDesigner
     /// </summary>
     public partial class ButtonForm : Window
     {
-        public ButtonForm()
+        DesignerItem item;
+        public ButtonForm(DesignerItem _item)
         {
             InitializeComponent();
+            item = _item;
+            Console.WriteLine("Drivernbsadkjhnaskjdfhn");
+            if (_item.activity != null && _item.activity.GetType() == typeof(Button))
+            {
+
+                XpathButton.Text = ((Button)(_item.activity)).xpathButton;
+            }
+            InitializeComponent();
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            Activity a = new Button(XpathButton.Text);
+            item.activity = a;
+            //Ac = haha.Text;
+            Close();
         }
     }
 }

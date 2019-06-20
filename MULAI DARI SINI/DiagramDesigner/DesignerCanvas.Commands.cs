@@ -11,6 +11,7 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using Microsoft.Win32;
 using OpenQA.Selenium.Chrome;
 
@@ -193,13 +194,38 @@ namespace DiagramDesigner
                                                   new XElement("zIndex", Canvas.GetZIndex(item)),
                                                   new XElement("IsGroup", item.IsGroup),
                                                   new XElement("ParentID", item.ParentID),
-                                                  new XElement("Content", contentXaml)
+                                                  new XElement("Content", contentXaml),
+                                                  new XElement("Activity", SerializeActivity(item.activity))
                                               )
                                    );
 
             return serializedItems;
         }
+        private string SerializeActivity(Activity act)
+        {
+            XmlSerializer xsActivity = new XmlSerializer(typeof(Activity));
+            var xml = "";
+            using (var sww = new StringWriter())
+            {
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsActivity.Serialize(writer, act);
+                    xml = sww.ToString(); // Your XML
+                }
+            }
+            return xml;
+        }
+        private static Activity DeserializeActivityXML(string xml)
+        {
+            var serializer = new XmlSerializer(typeof(Activity));
+            Activity result;
 
+            using (TextReader reader = new StringReader(xml))
+            {
+                result = (Activity)serializer.Deserialize(reader);
+            }
+            return result;
+        }
         private XElement SerializeConnections(IEnumerable<Connection> connections)
         {
             var serializedConnections = new XElement("Connections",
@@ -221,6 +247,7 @@ namespace DiagramDesigner
         private static DesignerItem DeserializeDesignerItem(XElement itemXML, Guid id, double OffsetX, double OffsetY)
         {
             DesignerItem item = new DesignerItem(id);
+            item.activity = DeserializeActivityXML(itemXML.Element("Activity").Value);
             item.Width = Double.Parse(itemXML.Element("Width").Value, CultureInfo.InvariantCulture);
             item.Height = Double.Parse(itemXML.Element("Height").Value, CultureInfo.InvariantCulture);
             item.ParentID = new Guid(itemXML.Element("ParentID").Value);
@@ -371,18 +398,80 @@ namespace DiagramDesigner
         }
 
         #endregion
-
+        private int findNext(int cur)
+        {
+            List<DesignerItem> designerItems = this.Children.OfType<DesignerItem>().ToList();
+            List<Connection> connections = this.Children.OfType<Connection>().ToList();
+            foreach(Connection c in connections)
+            {
+                if (c.Source.ParentDesignerItem.ID == designerItems[cur].ID)
+                {
+                    for(int i = 0; i < designerItems.Count; i++) { 
+                        if(c.Sink.ParentDesignerItem.ID == designerItems[i].ID)
+                        {
+                            Console.WriteLine(i);
+                            return i;
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
         #region Run Command
         private void Run_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             ChromeDriver driver;
-            driver = new ChromeDriver(@"C:\Users\Hari\source\repos\WpfApp1\Driver");
-            IEnumerable<DesignerItem> designerItems = this.Children.OfType<DesignerItem>();
-            foreach (var a in designerItems)
+            driver = new ChromeDriver(@"D:\TA\SemarakTA\Driver");
+            List<DesignerItem> designerItems = this.Children.OfType<DesignerItem>().ToList();
+            List<Connection> connections = this.Children.OfType<Connection>().ToList();
+            bool end = false;
+            int cur = -1;
+            while (!end)
             {
-                a.activity.driver = driver;
-                a.activity.run();
+                
+                if (cur == -1)
+                {
+                    for(int i = 0; i < designerItems.Count; i++)
+                    {
+                        System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[i].Content;
+                        if ((string)c.ToolTip == "Start")
+                        {
+                            cur = i;
+                        }
+                    }
+                }
+                else
+                {
+                    System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[cur].Content;
+                    Console.WriteLine(((string)c.ToolTip));
+                    
+                    if((string)c.ToolTip == "End")
+                    {
+                        Console.WriteLine("End");
+                        end = true;
+                    }
+                    else
+                    {
+                        designerItems[cur].activity.driver = driver;
+                        designerItems[cur].activity.run();
+                    }
+                   
+                }
+                cur = findNext(cur);
             }
+            //foreach(DesignerItem d in designerItems)
+            //{
+            //    System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)d.Content;
+            //    if ((string)c.ToolTip == "Start")
+            //    {
+
+            //    }
+            //}
+            //foreach (var a in designerItems)
+            //{
+            //    a.activity.driver = driver;
+            //    a.activity.run();
+            //}
             //foreach (KeyValuePair<String, String> p in DataSingleton.Instance.data)
             //{
             //    Console.WriteLine(p.Key + " = " + p.Value);

@@ -18,9 +18,26 @@ namespace DiagramDesigner
     /// </summary>
     public partial class GetDataForm : Window
     {
-        public GetDataForm()
+        DesignerItem item;
+        public GetDataForm(DesignerItem _item)
         {
             InitializeComponent();
+            item = _item;
+            Console.WriteLine("Drivernbsadkjhnaskjdfhn");
+            if (_item.activity != null && _item.activity.GetType() == typeof(GetData))
+            {
+                nama.Text = ((GetData)(_item.activity)).nama;
+                xpath.Text = ((GetData)(_item.activity)).xpath;
+            }
+            InitializeComponent();
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            Activity a = new GetData(nama.Text,xpath.Text);
+            item.activity = a;
+            //Ac = haha.Text;
+            Close();
         }
     }
 }

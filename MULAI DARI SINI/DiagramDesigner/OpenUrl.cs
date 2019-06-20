@@ -6,9 +6,14 @@ using System.Text;
 
 namespace DiagramDesigner
 {
-    class OpenUrl : Activity
+    [System.SerializableAttribute()]
+    public class OpenUrl : Activity
     {
         public String url;
+        public OpenUrl()
+        {
+
+        }
         public OpenUrl( string _url)
         {
             url = _url;

@@ -65,9 +65,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Button.cs" />
     <Compile Include="ButtonForm.xaml.cs">
       <DependentUpon>ButtonForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GetData.cs" />
     <Compile Include="MenampilkanDataForm.xaml.cs">
       <DependentUpon>MenampilkanDataForm.xaml</DependentUpon>
     </Compile>
@@ -162,6 +164,7 @@
       <DependentUpon>OpenUrlForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Serializer.cs" />
+    <Compile Include="SetData.cs" />
     <Compile Include="SetDataForm.xaml.cs">
       <DependentUpon>SetDataForm.xaml</DependentUpon>
     </Compile>

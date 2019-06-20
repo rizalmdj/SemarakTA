@@ -18,9 +18,27 @@ namespace DiagramDesigner
     /// </summary>
     public partial class SetDataForm : Window
     {
-        public SetDataForm()
+        DesignerItem item;
+        public SetDataForm(DesignerItem _item)
         {
             InitializeComponent();
+            item = _item;
+            Console.WriteLine("Drivernbsadkjhnaskjdfhn");
+            if (_item.activity != null && _item.activity.GetType() == typeof(SetData))
+            {
+                
+                Xpath.Text = ((SetData)(_item.activity)).xpath;
+                Content.Text = ((SetData)(_item.activity)).content;
+            }
+            InitializeComponent();
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            Activity a = new SetData(Xpath.Text,Content.Text);
+            item.activity = a;
+            //Ac = haha.Text;
+            Close();
         }
     }
 }
