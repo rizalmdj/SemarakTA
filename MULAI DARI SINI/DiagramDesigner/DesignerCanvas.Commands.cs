@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using Microsoft.Win32;
 using OpenQA.Selenium.Chrome;
+using DiagramDesigner.Model;
 
 namespace DiagramDesigner
 {
@@ -420,8 +421,13 @@ namespace DiagramDesigner
         #region Run Command
         private void Run_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            //open windows hasil
+            SingelView open = new SingelView();
+            open.Show();
+            //hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
+
             ChromeDriver driver;
-            driver = new ChromeDriver(@"D:\TA\SemarakTA\Driver");
+            driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
             List<DesignerItem> designerItems = this.Children.OfType<DesignerItem>().ToList();
             List<Connection> connections = this.Children.OfType<Connection>().ToList();
             bool end = false;

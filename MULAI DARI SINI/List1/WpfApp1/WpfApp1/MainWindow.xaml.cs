@@ -26,7 +26,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            driver = new ChromeDriver(@"D:\TA\SemarakTA\Driver");
+            driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
         }
 
         List<Activity> Activities = new List<Activity>();

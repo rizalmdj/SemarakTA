@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DiagramDesigner.Model;
 
 namespace DiagramDesigner
 {
@@ -28,6 +29,7 @@ namespace DiagramDesigner
             string value = driver.FindElementByXPath(xpath).Text;
             Console.WriteLine(nama + " " + value);
             //driver.Navigate().GoToUrl(url);
+            DataSingleton.Instance.data.Add(nama, value);
 
             //driver.Navigate().GoToUrl("https://www.instagram.com/"
 
