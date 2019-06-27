@@ -16,6 +16,9 @@
         <ResourceDictionary Source="Resources/Toolbox.xaml"/>
         <ResourceDictionary Source="Resources/Connection.xaml"/>
         <ResourceDictionary Source="Resources/Stencils/FlowChartStencils.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+
         <!--<ResourceDictionary Source="Resources/Stencils/ShapeStencils.xaml"/>-->
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>

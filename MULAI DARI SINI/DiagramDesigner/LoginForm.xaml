@@ -6,17 +6,20 @@
         xmlns:local="clr-namespace:DiagramDesigner"
         mc:Ignorable="d"
         Title="LoginForm" Height="460" Width="750">
+
     <Grid>
-        <Label Content="Login" FontSize="40" HorizontalAlignment="Left" Margin="309,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
         <Label Content="URL :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,96.6,0,0" VerticalAlignment="Top"/>
         <Label Content="Xpath Username :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,152.6,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,96.6,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
-        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,157.5,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
-        <Button Content="OK" FontSize="24" HorizontalAlignment="Left" Margin="618.5,348,0,0" VerticalAlignment="Top" Width="96"/>
-        <Button Content="Cancel" FontSize="24" HorizontalAlignment="Left" Margin="467,348,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox HorizontalAlignment="Left" Height="37" Margin="309,97,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="405"/>
+        <TextBox HorizontalAlignment="Left" Height="37" Margin="309,158,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="405"/>
+        <Button Content="OK" FontSize="24" HorizontalAlignment="Left" Margin="618,348,0,0" VerticalAlignment="Top" Width="96" Height="44"/>
+        <Button Content="Cancel" FontSize="24" HorizontalAlignment="Left" Margin="467,348,0,0" VerticalAlignment="Top" Width="105" Height="44"/>
         <Label Content="Xpath Password :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,217.6,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,222.5,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="309,222,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="405"/>
         <Label Content="Xpath Button Login :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,279.5,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="37.1" Margin="369.5,279.5,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="345"/>
+        <TextBox HorizontalAlignment="Left" Height="37" Margin="309,280,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="405"/>
+        <Grid Height="88" VerticalAlignment="Top" Background="Red">
+            <TextBlock Text="Login Form" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Calibri"/>
+        </Grid>
     </Grid>
 </Window>
