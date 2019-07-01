@@ -4,9 +4,7 @@
         xmlns:s="clr-namespace:DiagramDesigner"
         xmlns:c="clr-namespace:DiagramDesigner.Controls"
         WindowStartupLocation="CenterScreen"
-        Title="RPA TOOLS"
-        
-        WindowState="Maximized">
+        Title="RPA TOOLS" Width="1366" Height="728">
 
     <Window.Resources>
         <ContextMenu x:Key="DesignerCanvasContextMenu">
@@ -28,28 +26,32 @@
         <ContentControl Content="{StaticResource MyToolbar}"/>
 
         <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="168*"/>
+                <RowDefinition Height="187*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="265"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <!-- Toolbox -->
-            <StackPanel Grid.Column="0" Margin="28,0,125,0">
-                <Expander Header="Flow Chart" Content="{StaticResource FlowChartStencils}" IsExpanded="True"/>
+            <StackPanel Grid.Column="0" Margin="28,0,125,0" Grid.RowSpan="2">
+                <GroupBox Header="Flow Chart" Content="{StaticResource FlowChartStencils}" Margin="-25.5,0,63,0" Height="354" Background="Blue"/>
                 <!--<Expander Header="Shapes" Content="{StaticResource ShapeStencils}" IsExpanded="True"/>-->
             </StackPanel>
             <!-- GridSplitter -->
             <GridSplitter Focusable="False" Width="2" Background="LightGray"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Right"/>
+                    VerticalAlignment="Stretch" HorizontalAlignment="Right" Grid.RowSpan="2"/>
             <!-- Designer -->
-            <GroupBox Header="Diagram" Margin="162,0,0,0" Grid.ColumnSpan="2">
+            <GroupBox Header="Diagram" Margin="94.5,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto">
                     <s:DesignerCanvas Focusable="true" x:Name="MyDesigner"
-                            Background="{StaticResource WindowBackgroundBrush}"
-                            Margin="10" FocusVisualStyle="{x:Null}"
+                            Background="{StaticResource WindowBackgroundBrush}" FocusVisualStyle="{x:Null}"
                             ContextMenu="{StaticResource DesignerCanvasContextMenu}"/>
                 </ScrollViewer>
             </GroupBox>
         </Grid>
+        <Image HorizontalAlignment="Left" Height="95" Margin="1186.5,10,-20.5,0" VerticalAlignment="Top" Width="172" Source="Resources/Images/telkom.png" />
     </Grid>
 </Window>
