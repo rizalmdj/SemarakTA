@@ -20,6 +20,7 @@ namespace DiagramDesigner
     [TemplatePart(Name = "PART_ContentPresenter", Type = typeof(ContentPresenter))]
     public class DesignerItem : ContentControl, ISelectable, IGroupable
     {
+        public SingelView lihat;
         public Activity activity;
         #region ID
         private Guid id;

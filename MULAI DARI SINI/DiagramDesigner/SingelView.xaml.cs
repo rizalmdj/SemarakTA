@@ -45,11 +45,14 @@ namespace DiagramDesigner
 
         }
 
-       
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+       public void lihat()
         {
             hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
         }
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
+        //}
     }
 }

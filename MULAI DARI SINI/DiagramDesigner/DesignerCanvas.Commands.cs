@@ -16,11 +16,13 @@ using Microsoft.Win32;
 using OpenQA.Selenium.Chrome;
 using DiagramDesigner.Model;
 
+
+
 namespace DiagramDesigner
 {
     public partial class DesignerCanvas
     {
-
+       
         public DesignerCanvas()
         {
             this.CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New_Executed));
@@ -424,6 +426,9 @@ namespace DiagramDesigner
             //open windows hasil
             SingelView open = new SingelView();
             open.Show();
+            
+            
+         
             //hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
 
             ChromeDriver driver;
@@ -465,6 +470,7 @@ namespace DiagramDesigner
                 }
                 cur = findNext(cur);
             }
+            open.lihat();
             //foreach(DesignerItem d in designerItems)
             //{
             //    System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)d.Content;

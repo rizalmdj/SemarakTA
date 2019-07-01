@@ -9,6 +9,5 @@
     <Grid>
         <Label Content="Singel View" FontSize="40" HorizontalAlignment="Left" Margin="266,22.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
         <ListBox Name="hasil" HorizontalAlignment="Left" Height="203.636" Margin="150.091,108.182,0,0" VerticalAlignment="Top" Width="501"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="339.182,367.181,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>
