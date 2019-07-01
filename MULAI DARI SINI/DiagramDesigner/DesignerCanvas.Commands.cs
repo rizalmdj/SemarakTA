@@ -431,46 +431,62 @@ namespace DiagramDesigner
          
             //hasil.ItemsSource = DataSingleton.Instance.data.Values.ToList();
 
-            ChromeDriver driver;
-            driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
+            
             List<DesignerItem> designerItems = this.Children.OfType<DesignerItem>().ToList();
             List<Connection> connections = this.Children.OfType<Connection>().ToList();
             bool end = false;
             int cur = -1;
-            while (!end)
+
+            if (designerItems.Count == 0)
             {
-                
-                if (cur == -1)
+                Console.WriteLine("berse---------------");
+                MessageBox.Show("Diagram Belum Di Buat Atau Di Dasukan");
+                end = true;
+            }
+            else
+            {
+                ChromeDriver driver;
+                driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
+                while (!end)
                 {
-                    for(int i = 0; i < designerItems.Count; i++)
+
+                    if (cur == -1)
                     {
-                        System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[i].Content;
-                        if ((string)c.ToolTip == "Start")
+
+
+                        for (int i = 0; i < designerItems.Count; i++)
                         {
-                            cur = i;
+                            //nyari start permulaaan
+                            System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[i].Content;
+                            if ((string)c.ToolTip == "Start")
+                            {
+                                cur = i;
+                            }
                         }
-                    }
-                }
-                else
-                {
-                    System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[cur].Content;
-                    Console.WriteLine(((string)c.ToolTip));
-                    
-                    if((string)c.ToolTip == "End")
-                    {
-                        Console.WriteLine("End");
-                        end = true;
+
                     }
                     else
                     {
-                        designerItems[cur].activity.driver = driver;
-                        designerItems[cur].activity.run();
+                        System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)designerItems[cur].Content;
+                        Console.WriteLine(((string)c.ToolTip));
+
+                        if ((string)c.ToolTip == "End")
+                        {
+                            Console.WriteLine("End");
+                            end = true;
+                        }
+                        else
+                        {
+                            designerItems[cur].activity.driver = driver;
+                            designerItems[cur].activity.run();
+                        }
+
                     }
-                   
+                    cur = findNext(cur);
                 }
-                cur = findNext(cur);
+                open.lihat();
             }
-            open.lihat();
+            
             //foreach(DesignerItem d in designerItems)
             //{
             //    System.Windows.Shapes.Path c = (System.Windows.Shapes.Path)d.Content;
