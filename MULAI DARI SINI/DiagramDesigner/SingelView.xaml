@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="SingelView" Height="450" Width="800">
     <Grid>
-        <Label Content="Singel View" FontSize="40" HorizontalAlignment="Left" Margin="266,22.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.197,0.077"/>
-        <ListBox Name="hasil" HorizontalAlignment="Left" Height="203.636" Margin="150.091,108.182,0,0" VerticalAlignment="Top" Width="501"/>
+        <Grid Height="88" VerticalAlignment="Top" Background="#EC1E37">
+            <TextBlock Text="Single View" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Calibri"/>
+        </Grid>
+        <ListBox Name="hasil" HorizontalAlignment="Left" Height="203.636" Margin="155.836,136.905,0,0" VerticalAlignment="Top" Width="501"/>
     </Grid>
 </Window>

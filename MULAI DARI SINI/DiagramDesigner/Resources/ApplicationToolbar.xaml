@@ -6,11 +6,11 @@
         <ResourceDictionary Source="Styles/Shared.xaml"/>
         <ResourceDictionary Source="Styles/ToolBar.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    
+
     <ToolBar x:Key="MyToolbar" Height="120">
         <!--File-->
-        <GroupBox Header="File" Style="{StaticResource ToolbarGroup}" Margin="5,3,3,3">
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <GroupBox Style="{StaticResource ToolbarGroup}" Margin="5,3,3,3">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="White">
                 <Button Margin="3" Width="55" Style="{StaticResource ToolBarButtonBaseStyle}"
                         HorizontalContentAlignment="Center"
                         Command="{x:Static ApplicationCommands.New}"
@@ -21,12 +21,45 @@
                                 <RowDefinition Height="4*"/>
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
-                            <Image Source="Images/GenericDocument.png" Width="45"/>
+                            <Image Source="Images/new.png" Width="45"/>
                             <TextBlock Grid.Row="1" Text="New" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                         </Grid>
                     </Button.Content>
                 </Button>
-                <StackPanel Orientation="Vertical" Margin="0,2,0,2">
+
+                <Button Margin="3" Width="55" Style="{StaticResource ToolBarButtonBaseStyle}"
+                        HorizontalContentAlignment="Center"
+                        Command="{x:Static ApplicationCommands.Open}"
+                        CommandTarget="{Binding ElementName=MyDesigner}">
+                    <Button.Content>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="Images/folder.png" Width="45"/>
+                            <TextBlock Grid.Row="1" Text="Open" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
+
+                <Button Margin="3" Width="55" Style="{StaticResource ToolBarButtonBaseStyle}"
+                        HorizontalContentAlignment="Center"
+                        Command="{x:Static ApplicationCommands.Save}"
+                        CommandTarget="{Binding ElementName=MyDesigner}">
+                    <Button.Content>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="Images/simpan.png" Width="45"/>
+                            <TextBlock Grid.Row="1" Text="Save" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
+
+                <!--<StackPanel Orientation="Vertical" Margin="0,2,0,2">
                     <Button Margin="1" Padding="2" HorizontalContentAlignment="Left"
                             Style="{StaticResource ToolBarButtonBaseStyle}"
                             Command="{x:Static ApplicationCommands.Open}"
@@ -58,7 +91,8 @@
                         </Button.Content>
                     </Button>
                     
-                </StackPanel>
+                </StackPanel> -->
+
                 <Button Margin="3" Width="55"
                         Style="{StaticResource ToolBarButtonBaseStyle}"
                         Command="{x:Static ApplicationCommands.Delete}"
@@ -69,7 +103,7 @@
                                 <RowDefinition Height="4*"/>
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
-                            <Image Source="Images/Delete.png" Width="45"/>
+                            <Image Source="Images/trash.png" Width="45"/>
                             <TextBlock Grid.Row="1" Text="Delete" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                         </Grid>
                     </Button.Content>
@@ -84,15 +118,12 @@
                                 <RowDefinition Height="4*"/>
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
-                            <Image Source="Images/run.png" Width="45"/>
+                            <Image Source="Images/play.png" Width="45"/>
                             <TextBlock Grid.Row="1" Text="Run" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                         </Grid>
                     </Button.Content>
                 </Button>
             </StackPanel>
         </GroupBox>
-
-  
-
     </ToolBar>
 </ResourceDictionary>
