@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace DiagramDesigner
 {
@@ -24,12 +25,19 @@ namespace DiagramDesigner
         }
         public override void run()
         {
+            try
+            {
+                driver.FindElementByXPath(xpath).SendKeys(content);
+                //Console.WriteLine(xpath + " " + value);
+                //driver.Navigate().GoToUrl(url);
 
-            driver.FindElementByXPath(xpath).SendKeys(content);
-            //Console.WriteLine(xpath + " " + value);
-            //driver.Navigate().GoToUrl(url);
+                //driver.Navigate().GoToUrl("https://www.instagram.com/"
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
 
-            //driver.Navigate().GoToUrl("https://www.instagram.com/"
 
         }
     }

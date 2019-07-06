@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace DiagramDesigner
 {
@@ -22,14 +23,21 @@ namespace DiagramDesigner
         }
         public override void run()
         {
+            try
+            {
+                var button = driver.FindElementByXPath(xpathButton);
+                button.Click();
 
-            var button = driver.FindElementByXPath(xpathButton);
-            button.Click();
+                //Console.WriteLine(xpath + " " + value);
+                //driver.Navigate().GoToUrl(url);
 
-            //Console.WriteLine(xpath + " " + value);
-            //driver.Navigate().GoToUrl(url);
+                //driver.Navigate().GoToUrl("https://www.instagram.com/"
+            }
 
-            //driver.Navigate().GoToUrl("https://www.instagram.com/"
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
 
         }
     }
