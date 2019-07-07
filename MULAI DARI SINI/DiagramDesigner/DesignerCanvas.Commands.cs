@@ -446,7 +446,7 @@ namespace DiagramDesigner
             else
             {
                 ChromeDriver driver;
-                driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
+                driver = new OpenQA.Selenium.Chrome.ChromeDriver();
                 while (!end)
                 {
 
