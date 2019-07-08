@@ -69,6 +69,11 @@
     <Compile Include="ButtonForm.xaml.cs">
       <DependentUpon>ButtonForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Driver.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.resx</DependentUpon>
+    </Compile>
     <Compile Include="GetData.cs" />
     <Compile Include="MenampilkanDataForm.xaml.cs">
       <DependentUpon>MenampilkanDataForm.xaml</DependentUpon>
@@ -214,6 +219,10 @@
     <Compile Include="SelectionService.cs" />
     <Compile Include="Toolbox.cs" />
     <Compile Include="ToolboxItem.cs" />
+    <EmbeddedResource Include="Driver.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Driver.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
