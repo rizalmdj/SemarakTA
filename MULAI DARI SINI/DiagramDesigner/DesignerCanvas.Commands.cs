@@ -446,7 +446,7 @@ namespace DiagramDesigner
             else
             {
                 ChromeDriver driver;
-                driver = new ChromeDriver(@"D:\nitip\Data_Kuliah_SM6_FIX\Semarak TA\Driver");
+                driver = new ChromeDriver(@"D:\TA\SemarakTA\Driver");
                 while (!end)
                 {
 
