@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiagramDesigner"
         mc:Ignorable="d"
-        Title="SetDataForm" Height="460" Width="750">
+        Title="SetDataForm" Height="460" Width="620">
     <Grid>
-        <Grid Height="88" VerticalAlignment="Top" Background="#EC1E37">
+        <Grid Height="88" VerticalAlignment="Top" Background="SkyBlue">
             <TextBlock Text="Set Data Form" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Calibri"/>
         </Grid>
-        <Label Content="Xpath Element :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,167.2,0,0" VerticalAlignment="Top"/>
-        <Label Content="Content Element :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,259.1,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="Xpath" HorizontalAlignment="Left" Height="37.1" Margin="273.5,172.1,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="441"/>
-        <TextBox Name="Content" HorizontalAlignment="Left" Height="37.1" Margin="273.5,264,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="441"/>
-        <Button Content="OK" FontSize="24" HorizontalAlignment="Left" Margin="618.5,348,0,0" VerticalAlignment="Top" Width="96" Click="Save"/>
-        <Button Content="Cancel" FontSize="24" HorizontalAlignment="Left" Margin="467,348,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="XPath Element :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,119.2,0,0" VerticalAlignment="Top"/>
+        <Label Content="Content Element :" FontSize="24" HorizontalAlignment="Left" Margin="66.5,219.6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.167"/>
+        <TextBox Name="Xpath" HorizontalAlignment="Left" Height="37.1" Margin="66.5,161.2,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="483"/>
+        <TextBox Name="Content" HorizontalAlignment="Left" Height="37.1" Margin="66.5,261.6,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="483"/>
+        <Button Content="OK" FontSize="24" HorizontalAlignment="Left" Margin="453.5,348,0,0" VerticalAlignment="Top" Width="96" Click="Save"/>
+        <Button Content="Cancel" FontSize="24" HorizontalAlignment="Left" Margin="305,348,0,0" VerticalAlignment="Top" Width="105"/>
 
     </Grid>
 </Window>
